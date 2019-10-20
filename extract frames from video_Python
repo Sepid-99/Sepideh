@@ -1,0 +1,12 @@
+#extract frames from video_Python
+import cv2
+
+cap = cv2.VideoCapture('film.mkv')
+ret, frame = cap.read()
+count = 0
+while ret:
+    cv2.imwrite('frame%d.jpg'%count, frame)
+    ret,frame = cap.read()
+    cv2.imshow('frame%d.jpg'%count, frame)
+    print('counting is: ',True)
+    count=count+1
