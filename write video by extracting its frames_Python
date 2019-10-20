@@ -1,0 +1,26 @@
+#write video by extracting its frames_Python
+
+import cv2
+cap = cv2.VideoCapture('film.mkv')
+ret, frame = cap.read()
+count = 0
+#read farmes
+while ret:
+    cv2.imwrite('photo/frame%d.jpg' % count, frame)
+    ret, frame = cap.read()
+    #cv2.imshow('frame%d.jpg' % count, frame)
+    #print('counting is: ', True)
+    count = count + 1
+
+print(count)
+ad1 = 'photo/frame'
+ad2 = '.jpg'
+#for each frames do this loop:
+for i in range(0,count-1):
+    #print("before")
+    final_ad = ad1 + str(i) + ad2
+    image =cv2.imread(final_ad )
+    cv2.imshow('test' , image)
+    cv2.waitKey(10)
+    
+#showing frames continuely    
