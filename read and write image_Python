@@ -1,0 +1,11 @@
+#read and write image_Python
+import cv2
+
+image = cv2.imread('one.jpg')
+print(image)
+image2=cv2.imwrite('second.jpg',image)
+print(image2)
+final=cv2.imread('second.jpg')
+print(final)
+cv2.imshow('pic',final)
+cv2.waitKey(0)
