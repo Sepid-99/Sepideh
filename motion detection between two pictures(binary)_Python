@@ -1,0 +1,19 @@
+import cv2
+
+image1=cv2.imread('photo/frame0.jpg')
+ret , something=cv2.threshold(image1,127,255,cv2.THRESH_BINARY)
+
+cv2.imshow('test1,1',something)
+image2=cv2.imread('photo/frame2.jpg')
+ret1 , something1=cv2.threshold(image2,127,255,cv2.THRESH_BINARY)
+
+cv2.imshow('test2,2',something1)
+
+something2=something-something1
+print(something2)
+cv2.imshow('frame',something2)
+cv2.waitKey(0)
+if  something2.any() == False:
+    print('no change')
+else:
+    print('not same')
