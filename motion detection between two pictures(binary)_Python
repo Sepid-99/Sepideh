@@ -1,19 +1,22 @@
 import cv2
 
-image1=cv2.imread('photo/frame0.jpg')
-ret , something=cv2.threshold(image1,127,255,cv2.THRESH_BINARY)
+image1 = cv2.imread('photo/frame0.jpg',cv2.COLOR_BGR2GRAY)
+grey_image1=cv2.cvtColor(image1,cv2.COLOR_BGR2GRAY)
+ret, something = cv2.threshold(grey_image1, 127, 255, cv2.THRESH_BINARY)
+cv2.imshow('test1,1', something)
 
-cv2.imshow('test1,1',something)
-image2=cv2.imread('photo/frame2.jpg')
-ret1 , something1=cv2.threshold(image2,127,255,cv2.THRESH_BINARY)
+image2 = cv2.imread('photo/frame2.jpg')
+grey_image2=cv2.cvtColor(image2,cv2.COLOR_BGR2GRAY)
+ret1, something1 = cv2.threshold(grey_image2, 127, 255, cv2.THRESH_BINARY)
+cv2.imshow('test2,2', something1)
 
-cv2.imshow('test2,2',something1)
+something2 = something - something1
 
-something2=something-something1
 print(something2)
-cv2.imshow('frame',something2)
+cv2.imshow('frame', something2)
 cv2.waitKey(0)
-if  something2.any() == False:
+
+if something2.any() == False:
     print('no change')
 else:
     print('not same')
