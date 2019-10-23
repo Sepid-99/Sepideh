@@ -1,0 +1,31 @@
+import cv2
+
+i = 1
+j = 0
+while True:
+    ad1 = 'photo/frame'
+
+    ad2 = '.jpg'
+ 
+    for i in range(0, 3360):
+        print(i)
+       
+        final_ad2 = ad1 + str(i) + ad2
+        
+        image1 = cv2.imread('photo/frame0.jpg')
+        cv2.imshow('frame', image1)
+        
+        image2 = cv2.imread(final_ad2)
+        
+        F_image = image1 - image2
+
+      
+        if F_image.any() == False:
+            print('no change')
+        else:
+            for j in range(0 , int(3360/2)):
+                cv2.imwrite('photo2/new%d.jpg' % j, F_image)
+            print('not same')
+            cv2.imshow('new', F_image)
+            cv2.waitKey(1000)
+        i = i + 1
