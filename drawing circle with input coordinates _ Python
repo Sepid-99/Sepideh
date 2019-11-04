@@ -1,0 +1,12 @@
+import cv2
+
+image1 = cv2.imread('photo/frame0.jpg')
+
+print('enter x,y')
+x = input()
+y = input()
+
+cv2.circle(image1, (int(x),int(y)), 25, (255, 0, 255), 2)
+
+cv2.imshow('image',image1)
+cv2.waitKey()
