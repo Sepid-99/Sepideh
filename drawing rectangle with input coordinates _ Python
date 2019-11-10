@@ -1,0 +1,17 @@
+import cv2
+
+image1 = cv2.imread('photo/frame0.jpg')
+
+x1=input()
+y1=input()
+x2=input()
+y2=input()
+
+start_point = (int(x1),int(y1))
+end_point =(int(x2),int(y2))
+color = (0, 100, 0)
+
+cv2.rectangle(image1,start_point,end_point,color,1)
+
+cv2.imshow('image',image1)
+cv2.waitKey()
