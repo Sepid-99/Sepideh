@@ -1,0 +1,19 @@
+#this is sepideh!
+
+import pandas as pd
+from matplotlib import pyplot as plt
+
+data = pd.read_csv('countries.csv')
+
+#you need to write your file name instead of 'countries'
+
+af = data[data.country == 'China']
+us = data[data.country == "United States"]
+print(af)
+print(us)
+plt.plot(af.year, af.population / 10 ** 6)
+plt.plot(us.year, us.population / 10 ** 6)
+plt.legend(['this in china','this in usa'])
+plt.xlabel('year')
+plt.ylabel('population')
+plt.show()
