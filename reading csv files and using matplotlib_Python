@@ -1,0 +1,15 @@
+#this is sepideh!
+#i get my data from this site: csdojo.io/data
+
+import pandas as pd
+from matplotlib import pyplot as plt
+
+sample_data = pd.read_csv('sample_data.csv')
+#you need to write your data file name istead of 'sample_data')
+plt.title('new plot')
+plt.xlabel('column c')
+plt.ylabel('column a')
+plt.plot(sample_data.column_c, sample_data.column_a)
+plt.plot(sample_data.column_c, sample_data.column_b)
+plt.legend(['this is for summer', 'this is for winter'])
+plt.show()
