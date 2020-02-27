@@ -1,0 +1,17 @@
+#this is sepideh!
+#let's start machine learning with this simple project!
+#trying to diagnose apple from orange 
+
+from sklearn import tree
+
+
+features = [[140, 1], [130, 1], [150, 0], [170, 0]]
+#0 as smooth and 1 as bumpy
+
+labels = [0, 0, 1, 1]
+#0 as apple and 1 as orange
+
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(features, labels)
+
+print(clf.predict([[150, 0]]))
