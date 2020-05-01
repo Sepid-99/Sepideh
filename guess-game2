@@ -1,0 +1,21 @@
+#this code works with randint.
+
+import random
+a=0
+b=99
+
+hads = random.randint(a,b)
+print(hads)
+
+user_guess=input('')
+print (user_guess)
+
+while user_guess!='D':
+    if user_guess == 'K':
+        hads = random.randint(a,hads)
+    elif user_guess == 'B':
+        hads = random.randint(hads,b)  
+    print(hads)
+    user_guess=input('')
+    
+print('right')        
