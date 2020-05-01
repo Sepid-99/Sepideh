@@ -1,0 +1,16 @@
+import random
+name = input('what is yoyr name?') 
+adad = random.randint(1,99)
+print (adad)
+
+vorodi=int(input('adado bgu? '))
+
+while adad != vorodi:
+  if adad<vorodi:
+    print('bozorge :( ')
+  else:
+    print('kochike :( ')
+
+  vorodi = int(input('dobare bgu: '))
+
+print('yooooohooooo ', name,',you did it:))')  
