@@ -1,0 +1,11 @@
+num = int(input('num?: '))
+list1=[]
+list1.append(num)
+
+while num != -1:
+    num = int(input('num?: '))
+    if num!=-1:
+        list1.append(num)
+        maximum = max(list1)
+        
+print(maximum,'is maximum')
