@@ -1,0 +1,16 @@
+count_win=0
+count_lost=0
+count_equal=0
+
+for i in range(1,31):
+    num = int(input('adad ra vared konid'))
+    if num == 3:
+        count_win=count_win+1
+    elif num == 1:
+        count_equal=count_equal+1
+    elif num == 0:
+        count_lost=count_lost+1
+    i=i+1
+
+score = 3*count_win+1*count_equal+0*count_lost
+print ('total score:',score,'and you win ',count_win,'matches.')            
