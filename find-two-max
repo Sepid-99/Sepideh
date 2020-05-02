@@ -1,0 +1,15 @@
+num = int(input('num?: '))
+list1=[]
+
+while num in range(10,91):
+    list1.append(num)
+    num = int(input('num?: '))
+
+
+maximum1 = max(list1)
+
+print('max1 is: ',maximum1)
+
+list1.remove(maximum1)
+
+print('max2 is: ',max(list1))
