@@ -1,0 +1,18 @@
+string = input('enter you string: ')
+#print(dir('string'))
+if 'a' in string:
+    string = string.replace('a','')
+if 'u' in string:
+    string = string.replace('u','')
+if 'i' in string:
+    string = string.replace('i','')
+if 'e' in string:
+    string = string.replace('e','')
+if 'o' in string:
+    string = string.replace('e','')
+
+print(len(string))
+for i in range(0,len(string)):
+    new_string = '.' + string[i]
+    print(new_string,end='')
+    i= i+1
