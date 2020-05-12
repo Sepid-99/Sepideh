@@ -1,0 +1,5 @@
+inp1 = input('enter string: ')
+
+if inp1!='':
+    print(inp1[0].upper()+inp1[1:].lower())
+    inp1 = input('enter another string: ')
