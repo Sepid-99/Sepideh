@@ -1,0 +1,11 @@
+string = input('enter str: ')
+counter = dict()
+
+for item in string:
+    if item in counter:
+        counter[item] += 1
+    else:
+        counter[item] = 1
+
+for i in list(counter.keys()):
+    print('%s appeared %s times'%(i,counter[i]))     
