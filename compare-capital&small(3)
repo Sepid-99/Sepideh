@@ -1,0 +1,15 @@
+inp = input('enter str: ')
+c_u=0
+c_l=0
+for i in range(0, len(inp)):
+    if inp[i].isupper():
+        c_u=c_u+1
+    elif inp[i].islower():
+        c_l=c_l+1
+
+if c_u>c_l:
+    print(inp.upper())
+elif c_l>c_u:
+    print(inp.lower())
+else:
+    print(inp)        
