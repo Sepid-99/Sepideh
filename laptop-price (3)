@@ -1,0 +1,18 @@
+inp = int(input('enter num: '))
+list1 =[]
+c_p=0
+c_h=0
+for i in range(0,inp):
+    inp1=input('ent:')
+    list1.append(inp1)
+for i in range(0,len(list1)):
+    new = list1[i].split() 
+    if new[1]>new[0]:
+        c_p+=1
+    else:
+        c_h+=1
+
+if c_h==1:
+    print('happy')
+else:
+    print('poor')    
