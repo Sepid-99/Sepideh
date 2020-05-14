@@ -1,0 +1,21 @@
+import math
+
+new_list = []
+count = 0
+
+number = int(input('enter number: '))
+new = input('enter numbers:')
+
+new_list=new.split()
+print(new_list)
+print(len(new_list))
+for item in range(0 , len(new_list)):
+    new_list[item] = int(new_list[item])
+
+    if (new_list[item]) <=2 :
+        count+=1
+print(count)
+if count <= 2:
+    print('no group')
+elif count > 2:
+    print('result: ', count//3)
