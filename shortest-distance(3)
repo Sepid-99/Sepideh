@@ -1,0 +1,12 @@
+import math
+a=0
+b=0
+c=0
+inp = input('enter str: ')
+list1 = inp.split()
+print(list1)
+
+a = round(math.sqrt(abs((int(list1[0])**2)-(int(list1[1])**2))))
+b = round(math.sqrt(abs((int(list1[1])**2)-(int(list1[2])**2))))
+c = round(math.sqrt(abs((int(list1[0])**2)-(int(list1[2])**2))))
+print (min(a, b, c))
