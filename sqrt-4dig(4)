@@ -1,0 +1,8 @@
+import math
+number = 0
+f_num = int(input('nums: '))
+
+for i in range(0,f_num):
+    number = float(input('number: '))
+    res = round(math.sqrt(number),4)
+    print('result is ',res)
